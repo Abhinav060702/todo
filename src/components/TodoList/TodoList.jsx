@@ -1,7 +1,10 @@
 import  './TodoList.css'
 import Todo from '../Todo/Todo.jsx'
-function TodoList({todos,setTodos}){
+import { useContext } from 'react';
+import TodoContext from '../../context/TodoContext.jsx';
+function TodoList(){
 
+    const {todos,setTodos}=useContext(TodoContext);
     function onDeleteTodo(id){
         const newTodoList=todos.filter(todo=>todo.id != id);
         setTodos(newTodoList);
