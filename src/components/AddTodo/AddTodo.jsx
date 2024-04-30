@@ -3,7 +3,10 @@ import './AddTodo.css'
 import {useState } from "react";
 import { useDispatch } from 'react-redux';
 
+
+
 function AddTodo(){
+
     const dispatch=useDispatch();
     const [todoText,setTodoText]= useState('');
 
@@ -21,6 +24,7 @@ function AddTodo(){
         
         <button className='button' onClick={()=>{
             addTodo(todoText);
+           
         setTodoText('');
         }}>Add</button>
         </div>
